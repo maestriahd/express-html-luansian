@@ -12,7 +12,10 @@ var bodyParser = require('body-parser');
 // en el directorio `routes`
 var index = require('./routes/index');
 var users = require('./routes/users');
-var gatos = require('./routes/gato');
+var objetivos = require('./routes/objetivos');
+var plataforma = require('./routes/plataforma');
+var recopilacion = require('./routes/recopilacion');
+var valores = require('./routes/valores');
 // **** PARA AGREGAR UNA NUEVA RUTA  ****
 // descomente y cambie los valores de la siguiente línea
 //var NOMBRE_RUTA = require('./routes/ARCHIVO_RUTA');
@@ -23,7 +26,7 @@ var app = express();
 // las vistas deben estar en el directorio `views`
 app.set('views', path.join(__dirname, 'views'));
 // utiliza Handlebars
-// http://handlebarsjs.com/ 
+// http://handlebarsjs.com/
 app.set('view engine', 'hbs');
 
 // configuraciones adicionales
@@ -40,7 +43,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ejecuta el codigo de JS cuando es llamado desde una URL por el cliente
 app.use('/', index);
 app.use('/hola', users);
-app.use('/gatos', gatos);
+app.use('/objetivos', objetivos);
+app.use('/plataforma', plataforma);
+app.use('/recopilacion', recopilacion);
+app.use('/valores', valores);
 // **** PARA AGREGAR UNA NUEVA RUTA  ****
 // descomente y cambie los valores de la siguiente línea
 // app.use('/DONDE?', NOMBRE_RUTA);
