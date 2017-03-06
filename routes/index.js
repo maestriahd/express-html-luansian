@@ -15,10 +15,11 @@ router.get('/', function(req, res) {
   // ejecuta el render de la vista `index` (archivo en `views/index.hbs`)
   // entrega información a la vista para ser inyectada en el HTML
   res.render('index',
-    { title: 'Express',
+    { title: 'Recorridos virtuales de',
       saludo: 'hola a todos',
       numero: 1,
-      gato: 'https://www.mundogato.net/wp-content/uploads/normas-de-higiene-en-los-gatos-1-485x300.jpg'
+      gato: 'https://www.mundogato.net/wp-content/uploads/normas-de-higiene-en-los-gatos-1-485x300.jpg',
+      footer: 'Este proyecto se plantea en el marco de la Maestría en Humanidades Digitales de la Universidad de los Andes por Luis Antonio Silva'
     }
   );
 });
